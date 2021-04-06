@@ -1,2 +1,2 @@
 # simple-e-commerce-client
-Thia is the official client for simple e-commerce REST API
+This is the official client for simple e-commerce REST API
