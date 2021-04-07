@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ProductComponent } from './components/product/product.component';
 
 const routes: Routes = [
-  { path:"sidenav", component:SidenavComponent}
+  { path:"product", component:ProductComponent}
 ];
 
 @NgModule({

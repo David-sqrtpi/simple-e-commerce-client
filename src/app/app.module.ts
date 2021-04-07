@@ -13,12 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
