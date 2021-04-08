@@ -14,11 +14,13 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ProductComponent } from './components/product/product.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,

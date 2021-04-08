@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
-const URI_API:string = 'http://localhost:8080/product';
+const URI_API:string = 'http://localhost:8080/product/';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,6 @@ export class ProductHttpService {
   }
 
   getOne(sku:string) {
-    return this.http.get("URI_API"+sku);
+    return this.http.get(URI_API+sku);
   }
 }

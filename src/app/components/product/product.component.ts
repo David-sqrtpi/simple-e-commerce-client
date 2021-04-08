@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
 
   constructor(private http: ProductHttpService) { }
 
-  public res=null;
+  public rest=null;
 
   public waiting:boolean = false;
 
@@ -20,16 +20,16 @@ export class ProductComponent implements OnInit {
     this.http.getAll().subscribe(
       res => {
         console.log(res);
-        this.res = res[0]["name"];
+        this.rest = res;
       },
       err => {
         this.waiting=false;
         console.log(err);
-        this.res = err.name;
+        this.rest = err.name;
       },
       () => {
         this.waiting=false;
-        this.res ? 'No hay productos':null;
+        this.rest ? 'No hay productos':null;
         console.log('finished');
       }
     )
