@@ -1,2 +1,5 @@
-<p *ngFor="let res of rest">{{res.name}}</p>
+<p *ngFor="let res of rest">
+    {{res.name}}
+    <mat-divider></mat-divider>
+</p>
 <mat-spinner *ngIf="waiting"></mat-spinner>

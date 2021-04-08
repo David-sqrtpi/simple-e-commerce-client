@@ -1,23 +1,27 @@
+//Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
+//Components
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductComponent } from './components/product/product.component';
 
 //Angular material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { ProductComponent } from './components/product/product.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,9 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     HttpClientModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDividerModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
