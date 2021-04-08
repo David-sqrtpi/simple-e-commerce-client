@@ -19,6 +19,7 @@ export class ProductComponent implements OnInit {
     this.waiting=true;
     this.http.getAll().subscribe(
       res => {
+        this.waiting = false;
         console.log(res);
         this.rest = res;
       },
@@ -28,11 +29,10 @@ export class ProductComponent implements OnInit {
         this.rest = err.name;
       },
       () => {
-        this.waiting=false;
         this.rest ? 'No hay productos':null;
         console.log('finished');
       }
-    )
+    );
   }
 
 }

@@ -17,12 +17,28 @@ export class ProductFormComponent implements OnInit {
     sku : new FormControl()
   })
 
+  public waiting:boolean = false;
+
   ngOnInit(): void {
   }
 
   onSubmit() {
+    this.waiting = true;
     console.log(this.productForm.value);
-    
+    let body = this.productForm.value;
+    this.http.save(body).subscribe(
+      res=>{
+        this.waiting = false;
+        console.log(res);
+      },
+      err => {
+        this.waiting = false;
+        console.warn(err);
+      },
+      () => {
+        console.log('finished');
+      }
+    );
   }
 
 }

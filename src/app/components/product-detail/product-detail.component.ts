@@ -33,7 +33,7 @@ export class ProductDetailComponent implements OnInit {
         this.res ? 1:this.res='No hay un producto registrado con el sku '+ this.sku;
         console.log('finished');
       }
-    )
+    );
   }
 
 }

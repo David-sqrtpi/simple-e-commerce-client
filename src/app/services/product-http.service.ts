@@ -18,4 +18,8 @@ export class ProductHttpService {
   getOne(sku:string) {
     return this.http.get(URI_API+sku);
   }
+
+  save(body:object) {
+    return this.http.post(URI_API, body)
+  }
 }
