@@ -12,4 +12,6 @@ export class AppComponent {
   public toggle():void {
     this.sidenav.toggle();
   }
+
+  
 }

@@ -23,6 +23,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SideBarContentComponent } from './components/side-bar-content/side-bar-content.component';
+import { FindComponent } from './components/find/find.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SideBarContentComponent } from './components/side-bar-content/side-bar-
     ProductDetailComponent,
     ProductFormComponent,
     SideBarContentComponent,
+    FindComponent,
   ],
   imports: [
     BrowserModule,

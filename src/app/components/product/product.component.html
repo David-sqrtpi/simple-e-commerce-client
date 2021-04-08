@@ -1,5 +1,7 @@
 <p *ngFor="let res of rest">
-    {{res.name}}
+    <b>SKU: </b>{{res.sku}},
+    <b>Nombre: </b>{{res.name}},
+    <b>Precio: </b>${{res.price}}
     <mat-divider></mat-divider>
 </p>
 <mat-spinner *ngIf="waiting"></mat-spinner>

@@ -20,17 +20,15 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
     this.http.getOne(this.sku).subscribe(
       res => {
+        this.waiting = false;
         console.log(res);
-        res ? this.res = res["name"]:null;
+        res ? this.res = res:null;
       },
       err => {
         this.waiting = false;
         console.log(err);
-        this.res = err;
       },
-      () => {
-        this.waiting = false;
-        this.res ? 1:this.res='No hay un producto registrado con el sku '+ this.sku;
+      () => {        
         console.log('finished');
       }
     );

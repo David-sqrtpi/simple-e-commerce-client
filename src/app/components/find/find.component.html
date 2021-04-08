@@ -1,0 +1,9 @@
+<form [formGroup]="findForm" (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field appearance="fill" hideRequiredMarker>
+            <mat-label hideRequiredMark>SKU</mat-label>
+            <input matInput formControlName="sku" type="number" required>
+        </mat-form-field>
+    </p>
+    <button mat-flat-button color="primary" type="submit" [disabled]='!findForm.valid'>Buscar</button>
+</form>
