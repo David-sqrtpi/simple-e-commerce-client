@@ -14,4 +14,8 @@ export class ProductHttpService {
   getAll(){
     return this.http.get(URI_API);
   }
+
+  getOne(sku:string) {
+    return this.http.get("URI_API"+sku);
+  }
 }
