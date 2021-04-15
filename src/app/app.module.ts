@@ -24,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SideBarContentComponent } from './components/side-bar-content/side-bar-content.component';
 import { FindComponent } from './components/find/find.component';
+import { CartContentComponent } from './components/cart-content/cart-content.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FindComponent } from './components/find/find.component';
     ProductFormComponent,
     SideBarContentComponent,
     FindComponent,
+    CartContentComponent,
   ],
   imports: [
     BrowserModule,

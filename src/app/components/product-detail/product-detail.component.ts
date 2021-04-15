@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CartHttpService } from 'src/app/services/cart-http.service';
 import { ProductHttpService } from 'src/app/services/product-http.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ProductHttpService } from 'src/app/services/product-http.service';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor(private http: ProductHttpService, private route: ActivatedRoute) { }
+  constructor(private router:Router, private http: ProductHttpService,private route: ActivatedRoute, private httpCart:CartHttpService) { }
 
   public res=null;
 
@@ -32,6 +33,18 @@ export class ProductDetailComponent implements OnInit {
         console.log('finished');
       }
     );
+  }
+
+  addItem(sku:string) {
+    this.httpCart.addItem(sku).subscribe(
+      res => {
+        console.log(res);
+        this.router.navigate(['./cart']);
+      },
+      err => {
+        console.log(err);
+      }
+    )
   }
 
 }

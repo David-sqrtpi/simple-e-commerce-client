@@ -7,6 +7,6 @@
     <b>Precio: </b>${{res.price}}
 </p>
 <p>
-    <a mat-flat-button color='primary' routerLink='/find'>Volver</a>
+    <a mat-flat-button color='primary' (click)='addItem(res.sku)'>Añadir al carrito</a>
 </p>
 <mat-spinner *ngIf="waiting"></mat-spinner>

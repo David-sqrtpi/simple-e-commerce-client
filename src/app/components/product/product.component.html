@@ -1,4 +1,4 @@
-<p *ngFor="let res of rest">
+<p *ngFor="let res of rest" routerLink='/products/{{res.sku}}'>
     <b>SKU: </b>{{res.sku}},
     <b>Nombre: </b>{{res.name}},
     <b>Precio: </b>${{res.price}}
