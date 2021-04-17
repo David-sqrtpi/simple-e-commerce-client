@@ -1,7 +1,23 @@
-<p *ngFor="let res of rest" routerLink='/products/{{res.sku}}'>
-    <b>SKU: </b>{{res.sku}},
-    <b>Nombre: </b>{{res.name}},
-    <b>Precio: </b>${{res.price}}
-    <mat-divider></mat-divider>
-</p>
-<mat-spinner *ngIf="waiting"></mat-spinner>
+<table mat-table [dataSource] = rest >
+    <ng-container matColumnDef='sku'>
+        <th mat-header-cell *matHeaderCellDef>SKU</th>
+        <td mat-cell *matCellDef='let product'>{{product.sku}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef='name'>
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef='let product'>{{product.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef='price'>
+        <th mat-header-cell *matHeaderCellDef>Precio</th>
+        <td mat-cell *matCellDef='let product'>{{product.price}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef='columns'></tr>
+    <tr mat-row *matRowDef='let product; columns: columns'
+        routerLink='/products/{{product.sku}}'
+        class="hover-element"></tr>
+
+</table>
+<mat-spinner *ngIf="waiting" class="spinner"></mat-spinner>

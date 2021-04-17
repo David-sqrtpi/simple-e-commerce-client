@@ -1,3 +1,11 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+table {
+    width: 100%;
+}
+
+.hover-element:hover {
+    background: whitesmoke;
+}

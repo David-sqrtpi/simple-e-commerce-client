@@ -9,11 +9,13 @@ import { ProductHttpService } from 'src/app/services/product-http.service';
 
 export class ProductComponent implements OnInit {
 
-  constructor(private http: ProductHttpService) { }
-
   public rest=null;
 
   public waiting:boolean = false;
+
+  columns = ['sku', 'name', 'price'];
+
+  constructor(private http: ProductHttpService) { }
 
   ngOnInit(): void {
     this.waiting=true;

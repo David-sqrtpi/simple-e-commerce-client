@@ -14,7 +14,7 @@ export class ProductDetailComponent implements OnInit {
 
   public res=null;
 
-  public waiting:boolean = false;
+  public waiting:boolean = true;
 
   private sku:string = this.route.snapshot.params['sku'];
 

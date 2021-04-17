@@ -1,12 +1,14 @@
-<p *ngIf="!res">
-    No hay un producto registrado con el SKU {{sku}}
-</p>
-<p *ngIf="res">
-    <b>SKU: </b>{{res.sku}},
-    <b>Nombre: </b>{{res.name}},
-    <b>Precio: </b>${{res.price}}
-</p>
-<p>
-    <a mat-flat-button color='primary' (click)='addItem(res.sku)'>Añadir al carrito</a>
-</p>
+<div *ngIf='!waiting'>
+    <p *ngIf="!res">
+        No hay un producto registrado con el SKU {{sku}}
+    </p>
+    <p *ngIf="res">
+        <b>SKU: </b>{{res.sku}},
+        <b>Nombre: </b>{{res.name}},
+        <b>Precio: </b>${{res.price}}
+        <br>
+        <a mat-flat-button color='primary' (click)='addItem(res.sku)'>Añadir al carrito</a>
+    </p>
+</div>
+
 <mat-spinner *ngIf="waiting"></mat-spinner>
