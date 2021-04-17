@@ -25,6 +25,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SideBarContentComponent } from './components/side-bar-content/side-bar-content.component';
 import { FindComponent } from './components/find/find.component';
 import { CartContentComponent } from './components/cart-content/cart-content.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CartContentComponent } from './components/cart-content/cart-content.com
     ReactiveFormsModule,
     MatInputModule,
     MatDividerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

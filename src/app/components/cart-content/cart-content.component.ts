@@ -8,12 +8,14 @@ import { CartHttpService } from 'src/app/services/cart-http.service';
 })
 export class CartContentComponent implements OnInit {
 
-  public response = null;
+  columnsToDisplay = ['product', 'quantity', 'subtotal'];
+
+  public response:object = null;
 
   constructor(private http:CartHttpService) { }
 
   ngOnInit(): void {
-    this.http.getAll().subscribe(
+    this.http.get('placeholder').subscribe(
       res => {
         console.log(res);
         this.response = res;
@@ -23,5 +25,4 @@ export class CartContentComponent implements OnInit {
       }
     );
   }
-
 }

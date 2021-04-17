@@ -9,12 +9,16 @@ const URI_API = 'http://localhost:8080/carts/'
 export class CartHttpService {
 
   constructor(private http:HttpClient) { }
-  
+
+  get(uuid:string) {
+    return this.http.get(URI_API+'UUID');
+  }
+
   getAll() {
-    return this.http.get(URI_API+'f9ee5a47-6f06-4b24-96c6-cd724d2eb7c8');
+    return this.http.get(URI_API);
   }
 
   addItem(sku:string) {
-    return this.http.post(URI_API+'f9ee5a47-6f06-4b24-96c6-cd724d2eb7c8?productSku='+sku+'&productQuantity=1', null)
+    return this.http.post(URI_API+'UUID?productSku='+sku+'&productQuantity=1', null)
   }
 }
