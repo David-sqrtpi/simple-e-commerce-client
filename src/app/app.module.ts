@@ -26,6 +26,7 @@ import { SideBarContentComponent } from './components/side-bar-content/side-bar-
 import { FindComponent } from './components/find/find.component';
 import { CartContentComponent } from './components/cart-content/cart-content.component';
 import {MatTableModule} from '@angular/material/table';
+import { ModifyProductComponent } from './components/modify-product/modify-product.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {MatTableModule} from '@angular/material/table';
     SideBarContentComponent,
     FindComponent,
     CartContentComponent,
+    ModifyProductComponent,
   ],
   imports: [
     BrowserModule,

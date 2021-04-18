@@ -19,6 +19,10 @@ export class ProductHttpService {
     return this.http.get(URI_API+sku);
   }
 
+  modify(body:object) {
+    return this.http.put(URI_API+body['sku'], body);
+  }
+
   save(body:object) {
     return this.http.post(URI_API, body)
   }
