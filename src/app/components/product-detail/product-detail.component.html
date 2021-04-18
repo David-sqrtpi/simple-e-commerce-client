@@ -1,5 +1,5 @@
-<div *ngIf='!waiting'>
-    <p *ngIf="!res">
+<div>
+    <p *ngIf="!res && !waiting">
         No hay un producto registrado con el SKU {{sku}}
     </p>
     <p *ngIf="res">

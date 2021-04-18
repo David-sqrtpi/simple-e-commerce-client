@@ -36,6 +36,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   addItem(sku:string) {
+    this.waiting = true;
     this.httpCart.addItem(sku).subscribe(
       res => {
         console.log(res);
