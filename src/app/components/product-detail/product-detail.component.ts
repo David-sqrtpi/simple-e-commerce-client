@@ -13,10 +13,9 @@ export class ProductDetailComponent implements OnInit {
   constructor(private router:Router, private http: ProductHttpService,private route: ActivatedRoute, private httpCart:CartHttpService) { }
 
   public res=null;
-
   public waiting:boolean = true;
-
   private sku:string = this.route.snapshot.params['sku'];
+  private itemCount:number = +localStorage.getItem('itemCount');
 
   ngOnInit(): void {
     this.http.getOne(this.sku).subscribe(
@@ -40,6 +39,7 @@ export class ProductDetailComponent implements OnInit {
     this.httpCart.addItem(sku).subscribe(
       res => {
         console.log(res);
+        localStorage.setItem('itemCount', (++this.itemCount).toString());
         this.router.navigate(['./cart']);
       },
       err => {

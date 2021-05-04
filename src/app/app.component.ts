@@ -9,10 +9,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class AppComponent {
   @ViewChild('sidenav') private sidenav:MatSidenav;
 
+  public itemCount = localStorage.getItem('itemCount');
+
   public toggle():void {
     this.sidenav.toggle();
   }
 
-  
-  
 }
